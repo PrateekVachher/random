@@ -6,6 +6,6 @@ app = Celery('tasks', broker=broker_url, backend = backend_url)
 @app.task
 def factorial(x,y):
     mul = 1
-    for x1 in range(x,y):
+    for x1 in range(x,y+1):
         mul*=x1
     return mul
