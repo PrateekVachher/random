@@ -1,4 +1,5 @@
 from tasks import save_find_faces
+from os import listdir
 dataset = []
 for x in listdir('./pictures/'):
     save_find_faces.delay('pictures/'+x)
